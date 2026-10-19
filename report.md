@@ -1,4 +1,4 @@
-# CS6650 Assignment 4 Report
+# Report
 
 ## Submission Information
 
