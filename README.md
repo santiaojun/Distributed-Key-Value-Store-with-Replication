@@ -1,4 +1,4 @@
-# CS6650 Assignment 4 — Distributed Key-Value Store with Replication
+Distributed Key-Value Store with Replication
 
 
 
