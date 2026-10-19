@@ -388,7 +388,7 @@ cs6650-assignment4/
 ```
 
 ---
-## Results (AWS EC2, 5 × t3.micro, 32 threads, 600 s per run, ~2.1M requests total)
+## Results
 
 | Config | Write p50 | Throughput @1% writes | Throughput @90% writes | Stale reads |
 |---|---:|---:|---:|---|
