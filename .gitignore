@@ -1,0 +1,16 @@
+target/
+.idea/
+*.iml
+.DS_Store
+__pycache__/
+*.pyc
+*.pem
+results_wr*_threads*.csv
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform/terraform.tfvars
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: kv-node
+
+server:
+  port: ${PORT:8080}
+
+kv:
+  role: ${ROLE:leader}
+  follower-urls: ${FOLLOWER_URLS:}
+  peer-urls: ${PEER_URLS:}
+  write-quorum-size: ${WRITE_QUORUM_SIZE:5}
+  read-quorum-size: ${READ_QUORUM_SIZE:1}
+
+logging:
+  level:
+    root: INFO
+    edu.neu.cs6650.assignment4: INFO

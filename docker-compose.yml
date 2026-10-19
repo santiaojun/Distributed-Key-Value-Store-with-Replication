@@ -1,0 +1,62 @@
+services:
+  node1:
+    build:
+      context: .
+      dockerfile: kv-node/Dockerfile
+    image: cs6650/kv-node:latest
+    container_name: node1
+    environment:
+      ROLE: leader
+      FOLLOWER_URLS: http://node2:8080,http://node3:8080,http://node4:8080,http://node5:8080
+      WRITE_QUORUM_SIZE: ${WRITE_QUORUM_SIZE:-5}
+      READ_QUORUM_SIZE: ${READ_QUORUM_SIZE:-1}
+    ports:
+      - "8080:8080"
+
+  node2:
+    image: cs6650/kv-node:latest
+    container_name: node2
+    environment:
+      ROLE: follower
+      WRITE_QUORUM_SIZE: ${WRITE_QUORUM_SIZE:-5}
+      READ_QUORUM_SIZE: ${READ_QUORUM_SIZE:-1}
+    ports:
+      - "8081:8080"
+    depends_on:
+      - node1
+
+  node3:
+    image: cs6650/kv-node:latest
+    container_name: node3
+    environment:
+      ROLE: follower
+      WRITE_QUORUM_SIZE: ${WRITE_QUORUM_SIZE:-5}
+      READ_QUORUM_SIZE: ${READ_QUORUM_SIZE:-1}
+    ports:
+      - "8082:8080"
+    depends_on:
+      - node1
+
+  node4:
+    image: cs6650/kv-node:latest
+    container_name: node4
+    environment:
+      ROLE: follower
+      WRITE_QUORUM_SIZE: ${WRITE_QUORUM_SIZE:-5}
+      READ_QUORUM_SIZE: ${READ_QUORUM_SIZE:-1}
+    ports:
+      - "8083:8080"
+    depends_on:
+      - node1
+
+  node5:
+    image: cs6650/kv-node:latest
+    container_name: node5
+    environment:
+      ROLE: follower
+      WRITE_QUORUM_SIZE: ${WRITE_QUORUM_SIZE:-5}
+      READ_QUORUM_SIZE: ${READ_QUORUM_SIZE:-1}
+    ports:
+      - "8084:8080"
+    depends_on:
+      - node1
