@@ -14,12 +14,6 @@ Team members:
 | Runxin Shao | Leaderless logic and unit tests |
 | Ziqi Yang | Infrastructure, deployment, report, and final integration hardening |
 
-## Walkthrough Recording
-
-Yunhong Huang load tester and results walkthrough:
-[Yunhong Huang Load Tester Walkthrough Video](https://northeastern.zoom.us/rec/share/ks6EGCPciflw-66xUveLfJGYJkV_cbd9lTLMtica6OalBsnKplPdq9n5yZuB2ZJU.f70iWCePMZItMgui?startTime=1775594981000)
-
-Recording passcode: `YdMwWQ3+`
 
 ## 1. System Summary
 
