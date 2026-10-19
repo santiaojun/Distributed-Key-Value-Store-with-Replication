@@ -16,7 +16,7 @@ Distributed Key-Value Store with Replication
 - [Load Testing](#load-testing)
 - [Deployment](#deployment)
 - [Project Structure](#project-structure)
-- [Results]
+- [Result](#Result)
 
 ---
 
