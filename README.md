@@ -16,7 +16,7 @@ Distributed Key-Value Store with Replication
 - [Load Testing](#load-testing)
 - [Deployment](#deployment)
 - [Project Structure](#project-structure)
-- [Team](#team)
+- [Results]
 
 ---
 
@@ -388,4 +388,18 @@ cs6650-assignment4/
 ```
 
 ---
+## Results (AWS EC2, 5 × t3.micro, 32 threads, 600 s per run, ~2.1M requests total)
+
+| Config | Write p50 | Throughput @1% writes | Throughput @90% writes | Stale reads |
+|---|---:|---:|---:|---|
+| LF W=5/R=1 | 1,006 ms | 526 req/s | 35 req/s | ~0 |
+| LF W=3/R=3 | 603 ms | 416 req/s | 58 req/s | 0 |
+| LF W=1/R=5 | 201 ms | 343 req/s | 168 req/s | 0.13% → 5.4% |
+| Leaderless W=5/R=1 | 1,006 ms | 529 req/s | 35 req/s | ~0 |
+
+- Write latency scales linearly with W (≈ W × 200 ms), confirming the sequential replication model.
+- Stronger write quorums trade throughput for consistency: at 90% writes, W=1 delivers ~4.8× the throughput of W=5 but with 5.4% stale reads.
+- Full analysis and per-ratio breakdowns: [report.md](report.md).
+
+![Stale reads comparison](load-tester/results/aws-final/plots/stale_reads_comparison.png)
 
