@@ -389,11 +389,3 @@ cs6650-assignment4/
 
 ---
 
-## Team
-
-| Name | GitHub | Primary Responsibility |
-|---|---|---|
-| Yunhong Huang | — | Load tester and result artifacts |
-| Qingyu Cheng | — | KV node core and Leader-Follower replication logic |
-| Runxin Shao | — | Leaderless logic and unit tests |
-| Ziqi Yang | odieyangkhoury | Infrastructure, deployment, report, and final integration hardening |
