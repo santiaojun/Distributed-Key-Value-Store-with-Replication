@@ -1,6 +1,6 @@
 # CS6650 Assignment 4 — Distributed Key-Value Store with Replication
 
-> Northeastern University · CS6650 Building Scalable Distributed Systems
+
 
 ---
 
